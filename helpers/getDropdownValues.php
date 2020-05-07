@@ -23,5 +23,24 @@ if ($result->num_rows > 0) {
 	} 
 }
 
+$column_name = "Status";
+$query = "SELECT `$column_name` FROM $database.$table WHERE id = \"$getId\"";
+$result = $conn->query($query);
+if ($result->num_rows > 0) {
+   	while($row = mysqli_fetch_assoc($result)){
+		$currentStatus = $row[$column_name];
+	} 
+}
+
+
+$column_name = "Component";
+$query = "SELECT `$column_name` FROM $database.$table WHERE id = \"$getId\"";
+$result = $conn->query($query);
+if ($result->num_rows > 0) {
+   	while($row = mysqli_fetch_assoc($result)){
+		$currentComponent = $row[$column_name];
+	} 
+}
+
 
 ?>

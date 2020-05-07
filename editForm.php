@@ -55,13 +55,22 @@ if ($result->num_rows > 0) {
 				} elseif($fieldName === "Status"){
 					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 					foreach ($statuses as &$status) {
-						$form .= "<option value=\"$status\">$status</option>";
+						if($status === $currentStatus){
+							$form .= "<option value=\"$status\" selected>$status</option>";
+						} else  { 
+							$form .= "<option value=\"$status\">$status</option>";
+						}
+	
 					} 
 					$form .= '</select>';
 				} elseif($fieldName === "Component"){
 					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 					foreach ($clrComponents as &$component) {
-						$form .= "<option value=\"$component\">$component</option>";
+						if($component === $currentComponent){
+							$form .= "<option value=\"$compoonent\" selected>$component</option>";
+						} else  { 
+							$form .= "<option value=\"$component\">$component</option>";
+						}
 					} 
 					$form .= '</select>';
 
