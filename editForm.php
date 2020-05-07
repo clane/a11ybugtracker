@@ -87,7 +87,7 @@ if ($result->num_rows > 0) {
 
 	}
 
-$form .= "<input type='submit' value='Submit'></form>";
+$form .= "<input type=\"submit\" value=\"Update Bug $getId\"></form>";
 
 echo $form;
 

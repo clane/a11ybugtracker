@@ -47,7 +47,7 @@ if ($result = mysqli_query($conn, $query)) {
 	}
 
 	echo '<div>';
-	echo '<input type="submit" value="Delete" />';
+	echo "<input type=\"submit\" value=\"Delete Bug $getId\" />";
 	echo '</div>';
 	echo '</form>';
 
