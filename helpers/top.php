@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8" />
-		<title>VMware A11y Bug Tracker <?php print $database.$table; ?></title>
+		<title><?php print $pageTitle;  ?></title>
 		<link rel="stylesheet" href="1.css" />
 	</head>
 	<body>

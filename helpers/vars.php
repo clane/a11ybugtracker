@@ -2,8 +2,6 @@
 $servername = "localhost";
 $username = "root";
 $password = "VMware1!";
-#$database = "a11ybugtracker"; 
-$table = "testtable1"; 
 
 if($_GET["database"]) {  
 	$database = htmlspecialchars($_GET["database"]); 
@@ -21,6 +19,36 @@ if($_GET["table"]) {
 	$table = "testtable1"; 
 }
 
+
+$pageTitle = "A11Y Bug Tracker";
+
+if( preg_match('/index.php/', $_SERVER['REQUEST_URI'] )){
+	$pageTitle .= " - Home"; 
+}
+
+if( preg_match('/enterForm.php/', $_SERVER['REQUEST_URI'] )){
+	$pageTitle .= " - Entry Form"; 
+}
+
+if( preg_match('/showTable.php/', $_SERVER['REQUEST_URI'] )){
+	$pageTitle .= " - View All Bugs"; 
+}
+
+if( preg_match('/manageTable.php/', $_SERVER['REQUEST_URI'] )){
+	$pageTitle .= " - Manage All Bugs"; 
+}
+
+if( preg_match('/editForm.php/', $_SERVER['REQUEST_URI'] )){
+	$pageTitle .= " - Bug Update Form"; 
+}
+
+if( preg_match('/update.php/', $_SERVER['REQUEST_URI'] )){
+	$pageTitle .= " - Bug Update Status"; 
+}
+
+if( preg_match('/delete.php/', $_SERVER['REQUEST_URI'] )){
+	$pageTitle .= " - Bug Deletion Status"; 
+}
 
 ?>
 
