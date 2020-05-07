@@ -26,10 +26,10 @@ foreach ($fieldNames as &$fieldName) {
 [User Agents/Assistive Technologies]
 [Component]
 [Description]
-See the relevant HTML/CSS below.
 [User Impact]
 [Steps to Reproduce]
 [Recommendation]
+[Reporter Email] 
 
 			";
 

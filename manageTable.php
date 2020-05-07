@@ -8,7 +8,7 @@ include 'helpers/top.php';
 $query = "SELECT * FROM $database.$table ORDER BY id ASC";  
 $result = $conn->query($query);
 
-$html = "<h1>Manage Test Results - $database $table</h1>"; 
+$html = "<h1>Manage All Bugs - $database $table</h1>"; 
 $html .= "<table>";
 $html .=  "<tr>";  
 foreach ($fieldNames as $colName) {

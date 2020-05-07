@@ -40,6 +40,13 @@ foreach ($statuses as &$status) {
         $pattern = '/setBacklog/';
         $replacement = 'Backlog'; 
         $status  =  preg_replace($pattern, $replacement, $status);
+
+        $pattern = '/setFixed/';
+        $replacement = 'Fixed'; 
+        $status  =  preg_replace($pattern, $replacement, $status);
+
+
+
 } 
 
 
