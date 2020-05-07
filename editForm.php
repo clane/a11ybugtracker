@@ -19,8 +19,10 @@ if ($result->num_rows > 0) {
 
 	while($row = mysqli_fetch_assoc($result)){ 
 
-
-		$form = "<form action=\"edit.php?database=$database&table=$table\" method=\"post\">";
+		$form = "<form action=\"update.php\" method=\"post\">";
+		$form .= '<input type="hidden" name="id" value="' . $getId . '"' . '/>'; 
+		$form .= '<input type="hidden" name="database" value="' . $database . '"' . '/>'; 
+		$form .= '<input type="hidden" name="table" value="' . $table . '"' . '/>'; 
 
 		foreach ($fieldNames as &$fieldName) {
 			if ($fieldName !== "id" && $fieldName !== "Id" ) {
