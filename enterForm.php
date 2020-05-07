@@ -8,7 +8,7 @@ require 'helpers/getStatuses.php';
 require 'helpers/getClrComponents.php'; 
 include  'helpers/top.php'; 
 
-print "<h1>Enter Defect into $database $table</h1>";  
+print "<h1>Enter a Bug into $database $table</h1>";  
 
 $form = "<form action=\"insert.php?database=$database&table=$table\" method=\"post\">";
 

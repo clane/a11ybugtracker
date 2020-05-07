@@ -26,8 +26,8 @@ if ($result->num_rows > 0) {
 			$html .= "<td>";  
 			if($colName === "id" || $colName === "Id"){
 				$html .= $row[$colName];
-				$html .= "<div><a href=\"./editForm.php?id=$row[$colName]&database=$database&table=$table\">Update</a></div>";
-				$html .= "<div><a href=\"./deleteForm.php?id=$row[$colName]&database=$database&table=$table\">Delete</a></div>";
+				$html .= "<p><a href=\"./editForm.php?id=$row[$colName]&database=$database&table=$table\">Update bug $row[$colName]</a></p>";
+				$html .= "<p><a href=\"./deleteForm.php?id=$row[$colName]&database=$database&table=$table\">Delete bug $row[$colName]</a></p>";
 
 			} elseif ($colName === "Description"){
         			$html .= "<pre>";  

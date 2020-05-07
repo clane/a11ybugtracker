@@ -29,7 +29,7 @@ if ($result = mysqli_query($conn, $query)) {
     /* free result set */
     mysqli_free_result($result);
 
-	echo "<h2>Are you sure you want to delete this record from $database $table?</h2>";
+	echo "<h1>Delete Bug $getId $database $table</h1>";
 	echo "<form action=\"delete.php\" method=\"get\">";
 	echo '<input type="hidden" name="id" value="' . $getId . '"' . '/>'; 
 	echo '<input type="hidden" name="database" value="' . $database . '"' . '/>'; 

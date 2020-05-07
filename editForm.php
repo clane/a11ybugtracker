@@ -13,7 +13,7 @@ $getId = $_GET['id'];
 $query =  "SELECT * FROM $database.$table WHERE id = $getId";
 $result = $conn->query($query);
 
-print "<h1>Edit Defect into $table</h1>";  
+print "<h1>Edit Defect $getId in $database $table</h1>";  
 
 if ($result->num_rows > 0) {
 
