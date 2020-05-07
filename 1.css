@@ -3,7 +3,7 @@ body { font-size:10px; }
 
 #page a  { text-decoration:underline !important; } 
 
-#page { width:98%; margin:auto; } 
+#page { width:90%; margin: 20px auto; } 
 
 label {  display:block; font-weight:bold;  } 
 form div { margin-bottom:2rem; } 
@@ -31,4 +31,3 @@ th, td { 1%; }
 th:nth-of-type(6),  td:nth-of-type(6) { width:4%; }
 
 
-pre { margin:0; border:none; max-height:none; white-space: pre-wrap;  }

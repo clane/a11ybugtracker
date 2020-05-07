@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
-#$database = ""; 
+$password = "VMware1!";
+#$database = "a11ybugtracker"; 
 $table = "testtable1"; 
 
 if($_GET["database"]) {  

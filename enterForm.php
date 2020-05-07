@@ -18,7 +18,7 @@ foreach ($fieldNames as &$fieldName) {
 		$form .= "<label for='" . $fieldName . "'>" . $fieldName . "</label>";
 		
 		if($fieldName === "Description"){
-			$form .= "<textarea id='" . $fieldName . "' name='" . $fieldName . "' rows=\"20\" cols=\"80\">";
+			$form .= "<textarea id='" . $fieldName . "' name='" . $fieldName . "' rows=\"20\" cols=\"140\">";
                         $form .= "
 [Test URL]
 [WCAG 2.1 Guideline]

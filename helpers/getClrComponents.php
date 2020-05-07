@@ -38,7 +38,7 @@ foreach ($clrComponents as &$component) {
         $component =  preg_replace($pattern, $replacement, $component);
 
         $pattern = '/Timeline\)/';
-        $replacement = ''; 
+        $replacement = 'Timeline'; 
         $component =  preg_replace($pattern, $replacement, $component);
 
 

@@ -4,7 +4,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>VMware A11y Bug Tracker <?php print $database.$table; ?></title>
-		<link rel="stylesheet" href="https://unpkg.com/@clr/ui/clr-ui.min.css" />
 		<link rel="stylesheet" href="1.css" />
 	</head>
 	<body>
