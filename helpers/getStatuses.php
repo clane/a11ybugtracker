@@ -49,5 +49,6 @@ foreach ($statuses as &$status) {
 
 } 
 
+        $status = substr($status, 0, -1); //removing last )
 
 ?>

@@ -33,6 +33,10 @@ foreach ($wcagLevels as &$level) {
         $pattern = '/NA\)/';
         $replacement = 'NA'; 
         $level  =  preg_replace($pattern, $replacement, $level);
+        $pattern = '/\)/';
+        $replacement = ''; 
+        $level  =  preg_replace($pattern, $replacement, $level);
+
 
 } 
 
