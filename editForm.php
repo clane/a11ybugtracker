@@ -69,7 +69,7 @@ if ($result->num_rows > 0) {
 					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 					foreach ($clrComponents as &$component) {
 						if($component === $currentComponent){
-							$form .= "<option value=\"$compoonent\" selected>$component</option>";
+							$form .= "<option value=\"$component\" selected>$component</option>";
 						} else  { 
 							$form .= "<option value=\"$component\">$component</option>";
 						}
