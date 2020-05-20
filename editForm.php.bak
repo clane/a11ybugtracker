@@ -7,7 +7,6 @@ require 'helpers/getWcagLevels.php';
 require 'helpers/getStatuses.php'; 
 require 'helpers/getClrComponents.php'; 
 require 'helpers/getDropdownValues.php'; 
-require 'helpers/getSeverities.php'; 
 include  'helpers/top.php'; 
 
 $getId = $_GET['id'];
@@ -76,18 +75,6 @@ if ($result->num_rows > 0) {
 						}
 					} 
 					$form .= '</select>';
-
-				} elseif($fieldName === "Severity"){
-					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
-					foreach ($severityLevels as &$severity) {
-						if($severity === $currentSeverity){
-							$form .= "<option value=\"$severity\" selected>$severity</option>";
-						} else  { 
-							$form .= "<option value=\"$severity\">$severity</option>";
-						}
-					} 
-					$form .= '</select>';
-
 
 
 				} else {

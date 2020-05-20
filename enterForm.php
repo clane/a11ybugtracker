@@ -6,6 +6,7 @@ require 'helpers/getWcagGuidelines.php';
 require 'helpers/getWcagLevels.php'; 
 require 'helpers/getStatuses.php'; 
 require 'helpers/getClrComponents.php'; 
+require 'helpers/getSeverities.php'; 
 include  'helpers/top.php'; 
 
 print "<h1>Enter a Bug into $database $table</h1>";  
@@ -27,6 +28,8 @@ foreach ($fieldNames as &$fieldName) {
 [Component]
 [Description]
 [User Impact]
+[Severity]
+1-10
 [Steps to Reproduce]
 [Recommendation]
 [Reporter Email] 
@@ -58,6 +61,13 @@ foreach ($fieldNames as &$fieldName) {
 		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 			foreach ($clrComponents as &$component) {
 				$form .= "<option value=\"$component\">$component</option>";
+			} 
+			$form .= '</select>';
+
+		} elseif($fieldName === "Severity"){
+		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+			foreach ($severityLevels as &$severity) {
+				$form .= "<option value=\"$severity\">$severity</option>";
 			} 
 			$form .= '</select>';
 
