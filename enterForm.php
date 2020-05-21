@@ -23,16 +23,15 @@ foreach ($fieldNames as &$fieldName) {
                         $form .= "
 [Test URL]
 [WCAG 2.1 Guideline]
+[WCAG Conformance Level (A,AA,AAA)]
 [OS]
 [User Agents/Assistive Technologies]
 [Component]
 [Description]
 [User Impact]
-[Severity]
-1-10
+[Severity (1 -10)]
 [Steps to Reproduce]
 [Recommendation]
-[Reporter Email] 
 
 			";
 
