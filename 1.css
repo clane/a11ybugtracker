@@ -1,4 +1,11 @@
 
+
+*:focus, a:focus {
+    outline: 2px solid #d71ef7;
+    border: 1px solid #ffffff;
+}
+
+
 body { font-size:10px; } 
 
 #page a  { text-decoration:underline !important; } 
