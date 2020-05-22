@@ -8,7 +8,7 @@ print "<h1>VPAT Content for  $database $table</h1>";
 
 foreach ($wcagGuidelines as &$guideline) {
 	print "<h2>$guideline</h2>";
-	$query = "SELECT Component, Headline FROM $database.$table WHERE `WCAG Guideline` = \"$guideline\" ORDER BY Component ASC";  
+	$query = "SELECT Component, Headline FROM $database.$table WHERE `WCAG Guideline` = \"$guideline\" AND Status = \"Not Fixed in V3\" ||  `WCAG Guideline` = \"$guideline\" AND Status = \"New in V3\" ORDER BY Component ASC";  
 	$result = $conn->query($query);
 	if (mysqli_num_rows($result) === 0){
 		print "<p>";
