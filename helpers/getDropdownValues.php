@@ -51,4 +51,15 @@ if ($result->num_rows > 0) {
 	} 
 }
 
+$column_name = "UAAT";
+$query = "SELECT `$column_name` FROM $database.$table WHERE id = \"$getId\"";
+$result = $conn->query($query);
+if ($result->num_rows > 0) {
+   	while($row = mysqli_fetch_assoc($result)){
+		$currentUAAT = $row[$column_name];
+	} 
+}
+
+
+
 ?>

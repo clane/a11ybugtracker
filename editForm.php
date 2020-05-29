@@ -8,7 +8,9 @@ require 'helpers/getStatuses.php';
 require 'helpers/getClrComponents.php'; 
 require 'helpers/getDropdownValues.php'; 
 require 'helpers/getSeverities.php'; 
+require 'helpers/getUAATs.php'; 
 include  'helpers/top.php'; 
+
 
 $getId = $_GET['id'];
 $query =  "SELECT * FROM $database.$table WHERE id = $getId";
@@ -88,6 +90,17 @@ if ($result->num_rows > 0) {
 					} 
 					$form .= '</select>';
 
+				} elseif($fieldName === "UAAT"){
+					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+
+					foreach ($UAATs as &$uaat) {
+						if($uaat === $currentUAAT){
+							$form .= "<option value=\"$uaat\" selected>$uaat</option>";
+						} else  { 
+							$form .= "<option value=\"$uaat\">$uaat</option>";
+						}
+					} 
+					$form .= '</select>';
 
 
 				} else {

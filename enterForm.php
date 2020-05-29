@@ -7,6 +7,7 @@ require 'helpers/getWcagLevels.php';
 require 'helpers/getStatuses.php'; 
 require 'helpers/getClrComponents.php'; 
 require 'helpers/getSeverities.php'; 
+require 'helpers/getUAATs.php'; 
 include  'helpers/top.php'; 
 
 print "<h1>Enter a Bug into $database $table</h1>";  
@@ -69,6 +70,14 @@ foreach ($fieldNames as &$fieldName) {
 				$form .= "<option value=\"$severity\">$severity</option>";
 			} 
 			$form .= '</select>';
+
+		} elseif($fieldName === "UAAT"){
+		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+			foreach ($UAATs as &$uaat) {
+				$form .= "<option value=\"$uaat\">$uaat</option>";
+			} 
+			$form .= '</select>';
+
 
 
 		} else {
