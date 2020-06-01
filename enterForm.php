@@ -8,6 +8,7 @@ require 'helpers/getStatuses.php';
 require 'helpers/getClrComponents.php'; 
 require 'helpers/getSeverities.php'; 
 require 'helpers/getUAATs.php'; 
+require 'helpers/getOpSystems.php'; 
 include  'helpers/top.php'; 
 
 print "<h1>Enter a Bug into $database $table</h1>";  
@@ -75,6 +76,13 @@ foreach ($fieldNames as &$fieldName) {
 		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 			foreach ($UAATs as &$uaat) {
 				$form .= "<option value=\"$uaat\">$uaat</option>";
+			} 
+			$form .= '</select>';
+
+		} elseif($fieldName === "OS"){
+		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+			foreach ($OpSystems as &$os) {
+				$form .= "<option value=\"$os\">$os</option>";
 			} 
 			$form .= '</select>';
 

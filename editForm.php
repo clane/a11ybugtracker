@@ -9,6 +9,7 @@ require 'helpers/getClrComponents.php';
 require 'helpers/getDropdownValues.php'; 
 require 'helpers/getSeverities.php'; 
 require 'helpers/getUAATs.php'; 
+require 'helpers/getOpSystems.php'; 
 include  'helpers/top.php'; 
 
 
@@ -102,6 +103,18 @@ if ($result->num_rows > 0) {
 					} 
 					$form .= '</select>';
 
+
+				} elseif($fieldName === "OS"){
+					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+
+					foreach ($OpSystems as &$os) {
+						if($os === $currentOS){
+							$form .= "<option value=\"$os\" selected>$os</option>";
+						} else  { 
+							$form .= "<option value=\"$os\">$os</option>";
+						}
+					} 
+					$form .= '</select>';
 
 				} else {
 					$form .= "<input type=\"text\" id=\"$fieldName\" name=\"$fieldName\" value=\"$row[$fieldName]\"/>";
