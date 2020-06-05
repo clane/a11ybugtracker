@@ -9,6 +9,7 @@ require 'helpers/getClrComponents.php';
 require 'helpers/getDropdownValues.php'; 
 require 'helpers/getSeverities.php'; 
 require 'helpers/getNoticeability.php'; 
+require 'helpers/getTractability.php'; 
 require 'helpers/getUAATs.php'; 
 require 'helpers/getOpSystems.php'; 
 include  'helpers/top.php'; 
@@ -131,6 +132,21 @@ if ($result->num_rows > 0) {
 						}
 					} 
 					$form .= '</select>';
+
+				} elseif($fieldName === "Tractability"){
+
+					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+
+					foreach ($tractabilityLevels as &$level) {
+						if($level === $currentTractability){
+							$form .= "<option value=\"$level\" selected>$level</option>";
+						} else  { 
+							$form .= "<option value=\"$level\">$level</option>";
+						}
+					} 
+					$form .= '</select>';
+
+
 
 				} else {
 					$form .= "<input type=\"text\" id=\"$fieldName\" name=\"$fieldName\" value=\"$row[$fieldName]\"/>";

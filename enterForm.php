@@ -10,6 +10,7 @@ require 'helpers/getSeverities.php';
 require 'helpers/getUAATs.php'; 
 require 'helpers/getOpSystems.php'; 
 require 'helpers/getNoticeability.php'; 
+require 'helpers/getTractability.php'; 
 require 'helpers/getSeverities.php'; 
 include  'helpers/top.php'; 
 
@@ -22,22 +23,8 @@ foreach ($fieldNames as &$fieldName) {
 		$form .= "<div>";
 		$form .= "<label for='" . $fieldName . "'>" . $fieldName . "</label>";
 		
-		if($fieldName === "Description"){
+		if($fieldName === "Description" || $fieldName === "Steps to Reproduce" || $fieldName === "Recommended Remediation"){
 			$form .= "<textarea id='" . $fieldName . "' name='" . $fieldName . "' rows=\"20\" cols=\"140\">";
-                        $form .= "
-[Test URL]
-[WCAG 2.1 Guideline]
-[WCAG Conformance Level (A,AA,AAA)]
-[OS]
-[User Agents/Assistive Technologies]
-[Component]
-[Description]
-[User Impact]
-[Severity (1 -10)]
-[Steps to Reproduce]
-[Recommendation]
-
-			";
 
 
 			$form .= "</textarea>";
@@ -98,6 +85,13 @@ foreach ($fieldNames as &$fieldName) {
 		} elseif($fieldName === "Severity"){
 		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 			foreach ($severityLevels as &$level) {
+				$form .= "<option value=\"$level\">$level</option>";
+			} 
+			$form .= '</select>';
+
+		} elseif($fieldName === "Tractability"){
+		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+			foreach ($tractabilityLevels as &$level) {
 				$form .= "<option value=\"$level\">$level</option>";
 			} 
 			$form .= '</select>';
