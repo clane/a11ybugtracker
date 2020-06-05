@@ -8,6 +8,7 @@ require 'helpers/getStatuses.php';
 require 'helpers/getClrComponents.php'; 
 require 'helpers/getDropdownValues.php'; 
 require 'helpers/getSeverities.php'; 
+require 'helpers/getNoticeability.php'; 
 require 'helpers/getUAATs.php'; 
 require 'helpers/getOpSystems.php'; 
 include  'helpers/top.php'; 
@@ -102,6 +103,21 @@ if ($result->num_rows > 0) {
 						}
 					} 
 					$form .= '</select>';
+
+
+				} elseif($fieldName === "Noticeability"){
+
+					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+
+					foreach ($noticeabilityLevels as &$level) {
+						if($level === $currentNoticeability){
+							$form .= "<option value=\"$level\" selected>$level</option>";
+						} else  { 
+							$form .= "<option value=\"$level\">$level</option>";
+						}
+					} 
+					$form .= '</select>';
+
 
 
 				} elseif($fieldName === "OS"){

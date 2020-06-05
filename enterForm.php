@@ -9,6 +9,8 @@ require 'helpers/getClrComponents.php';
 require 'helpers/getSeverities.php'; 
 require 'helpers/getUAATs.php'; 
 require 'helpers/getOpSystems.php'; 
+require 'helpers/getNoticeability.php'; 
+require 'helpers/getSeverities.php'; 
 include  'helpers/top.php'; 
 
 print "<h1>Enter a Bug into $database $table</h1>";  
@@ -85,6 +87,21 @@ foreach ($fieldNames as &$fieldName) {
 				$form .= "<option value=\"$os\">$os</option>";
 			} 
 			$form .= '</select>';
+
+		} elseif($fieldName === "Noticeability"){
+		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+			foreach ($noticeabilityLevels as &$level) {
+				$form .= "<option value=\"$level\">$level</option>";
+			} 
+			$form .= '</select>';
+
+		} elseif($fieldName === "Severity"){
+		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+			foreach ($severityLevels as &$level) {
+				$form .= "<option value=\"$level\">$level</option>";
+			} 
+			$form .= '</select>';
+
 
 
 
