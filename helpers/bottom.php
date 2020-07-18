@@ -1,5 +1,5 @@
 <?php 
-print "</div>";//end #page
+print "</main></div></div>";//end #page
 print "</body>";
 print "</html>";
  
