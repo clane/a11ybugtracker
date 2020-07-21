@@ -5,12 +5,7 @@
     border: 3px solid #ffffff;
 }
 
-
-body { font-size:10px; } 
-
-#page a  { text-decoration:underline !important; } 
-
-#page { width:90%; margin: 20px auto; } 
+#page a  { text-decoration:underline  } 
 
 label {  display:block; font-weight:bold;  } 
 form div { margin-bottom:2rem; } 
@@ -40,3 +35,19 @@ th, td { 1%; }
 th:nth-of-type(6),  td:nth-of-type(6) { width:4%; }
 
 
+.logo {
+    filter: brightness(3);
+}
+
+.nav-vertical-center {
+    align-self: center;
+}
+
+h1.title.nav-vertical-center, h1.title.nav-vertical-center a {
+    margin: unset;
+    color: white;
+}
+
+a#home-link {
+    text-decoration: none;
+}
