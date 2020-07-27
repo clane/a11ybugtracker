@@ -12,9 +12,10 @@ require 'helpers/getOpSystems.php';
 require 'helpers/getNoticeability.php'; 
 require 'helpers/getTractability.php'; 
 require 'helpers/getSeverities.php'; 
+require 'helpers/getWcagVersions.php'; 
 include  'helpers/top.php'; 
 
-print "<h1>Enter a Bug into $database $table</h1>";  
+print "<h1>Add an issue to $database $table</h1>";  
 
 $form = "<form action=\"insert.php?database=$database&table=$table\" method=\"post\">";
 
@@ -95,6 +96,15 @@ foreach ($fieldNames as &$fieldName) {
 				$form .= "<option value=\"$level\">$level</option>";
 			} 
 			$form .= '</select>';
+
+		} elseif($fieldName === "WCAG Version"){
+		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+			foreach ($wcagVersions as &$version) {
+
+				$form .= "<option value=\"$version\">$version</option>";
+			} 
+			$form .= '</select>';
+
 
 
 

@@ -12,6 +12,7 @@ require 'helpers/getNoticeability.php';
 require 'helpers/getTractability.php'; 
 require 'helpers/getUAATs.php'; 
 require 'helpers/getOpSystems.php'; 
+require 'helpers/getWcagVersions.php'; 
 include  'helpers/top.php'; 
 
 
@@ -145,6 +146,28 @@ if ($result->num_rows > 0) {
 						}
 					} 
 					$form .= '</select>';
+
+
+
+
+	} elseif($fieldName === "WCAG Version"){
+
+					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+
+					foreach ($wcagVersions as &$version) {
+						if($version === $currentWcagVersion){
+							$form .= "<option value=\"$version\" selected>$version</option>";
+						} else  { 
+							$form .= "<option value=\"$version\">$version</option>";
+						}
+					} 
+					$form .= '</select>';
+
+
+
+
+
+
 
 
 
