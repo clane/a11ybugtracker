@@ -23,15 +23,23 @@ $wcagGuidelines = explode('\',', $guidelines);
 //more cleanup
 
 foreach ($wcagGuidelines as &$guideline) {
+
         $pattern = '/\(\'/';
         $replacement = ''; 
         $guideline =  preg_replace($pattern, $replacement, $guideline);
+
 	$pattern = '/\'/';
         $replacement = ''; 
         $guideline =  preg_replace($pattern, $replacement, $guideline);
+
         $pattern = '/NA\)/';
         $replacement = 'NA'; 
         $guideline =  preg_replace($pattern, $replacement, $guideline);
+
+        $pattern = '/Undetermined\)/';
+        $replacement = 'Undetermined'; 
+        $guideline =  preg_replace($pattern, $replacement, $guideline);
+
 
 } 
 
