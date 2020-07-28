@@ -22,7 +22,7 @@ $getId = $_GET['id'];
 $query =  "SELECT * FROM $database.$table WHERE id = $getId";
 $result = $conn->query($query);
 
-print "<h1>$pageTitle</h1>";
+print "<h1>Bug $getId $pageTitle</h1>";
 
 if ($result->num_rows > 0) {
 

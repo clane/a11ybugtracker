@@ -5,9 +5,11 @@ require 'helpers/vars.php';
 include  'helpers/top.php';
 
 
+
 foreach ($_POST as $param_name => $param_val) {
 	if($param_name === 'id') {
 		$id = $param_val; 
+		print "<h1>Bug $id Update Status</h1>";
 	} else {
 
 		if($param_name !== 'database' && $param_name !== 'table'){

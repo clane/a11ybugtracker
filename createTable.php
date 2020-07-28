@@ -5,7 +5,7 @@ require 'helpers/vars.php';
 include 'helpers/top2.php'; 
 include 'helpers/getColNames.php'; 
 
-print "<h1>Table Creation - database:$database</h1>"; 
+print "<h1>$pageTitle</h1>"; 
 
 $newTable =  $_POST['newTable'];
 

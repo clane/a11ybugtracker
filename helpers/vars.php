@@ -40,11 +40,11 @@ if( preg_match('/manageTable.php/', $_SERVER['REQUEST_URI'] )){
 }
 
 if( preg_match('/editForm.php/', $_SERVER['REQUEST_URI'] )){
-	$pageTitle .= "Bug Update Form"; 
+	$pageTitle .= " Update Form"; 
 }
 
 if( preg_match('/update.php/', $_SERVER['REQUEST_URI'] )){
-	$pageTitle .= "Bug Update Status"; 
+	$pageTitle .= " Update Status"; 
 }
 
 if( preg_match('/deleteForm.php/', $_SERVER['REQUEST_URI'] )){
@@ -53,7 +53,14 @@ if( preg_match('/deleteForm.php/', $_SERVER['REQUEST_URI'] )){
 if( preg_match('/delete.php/', $_SERVER['REQUEST_URI'] )){
 	$pageTitle .= "Bug Deletion Status"; 
 }
+if( preg_match('/newTableForm.php/', $_SERVER['REQUEST_URI'] )){
+	$pageTitle .= "New Table Form"; 
+}
+
+if( !preg_match('/newTableForm.php/', $_SERVER['REQUEST_URI']) && !preg_match('/createTable.php/', $_SERVER['REQUEST_URI'])  ){
 $pageTitle .= " - $database $table";
+}
+
 
 ?>
 
