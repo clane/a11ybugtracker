@@ -13,6 +13,7 @@ require 'helpers/getNoticeability.php';
 require 'helpers/getTractability.php'; 
 require 'helpers/getSeverities.php'; 
 require 'helpers/getWcagVersions.php'; 
+require 'helpers/getPriorities.php'; 
 include  'helpers/top.php'; 
 
 print "<h1>Add an issue to $database $table</h1>";  
@@ -24,7 +25,7 @@ foreach ($fieldNames as &$fieldName) {
 		$form .= "<div>";
 		$form .= "<label for='" . $fieldName . "'>" . $fieldName . "</label>";
 		
-		if($fieldName === "Description" || $fieldName === "Steps to Reproduce" || $fieldName === "Recommended Remediation"){
+		if($fieldName === "Description" || $fieldName === "Steps to Reproduce" || $fieldName === "Recommended Remediation" || $fieldName === "Relevant Code" || $fieldName === "User Impact"){
 			$form .= "<textarea id='" . $fieldName . "' name='" . $fieldName . "' rows=\"20\" cols=\"140\">";
 
 
@@ -105,6 +106,14 @@ foreach ($fieldNames as &$fieldName) {
 			} 
 			$form .= '</select>';
 
+
+		} elseif($fieldName === "Priority"){
+		 	$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
+			foreach ($priorities as &$priority) {
+
+				$form .= "<option value=\"$priority\">$priority</option>";
+			} 
+			$form .= '</select>';
 
 
 

@@ -12,6 +12,7 @@ require 'helpers/getNoticeability.php';
 require 'helpers/getTractability.php'; 
 require 'helpers/getUAATs.php'; 
 require 'helpers/getOpSystems.php'; 
+require 'helpers/getPriorities.php'; 
 require 'helpers/getWcagVersions.php'; 
 include  'helpers/top.php'; 
 
@@ -36,11 +37,11 @@ if ($result->num_rows > 0) {
 				$form .= "<div>";
 				$form .= "<label for='" . $fieldName . "'>" . $fieldName . "</label>";
 				
-				if($fieldName === "Description"){
+				if($fieldName === "Description" || $fieldName === "Recommended Remediation" || $fieldName === "Steps to Reproduce" || $fieldName === "Relevant Code" || $fieldName === "User Impact"){
 					$form .= "<textarea id='" . $fieldName . "' name='" . $fieldName . "' rows=\"20\" cols=\"140\">";
 					$form .= $row[$fieldName];
 					$form .= "</textarea>";
-				} elseif($fieldName === "WCAG Guideline"){
+				} elseif($fieldName === "WCAG Guideline" || $fieldName === "WCAG Success Criterion"){
 					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 					foreach ($wcagGuidelines as &$guideline) {
 						if($guideline === $currentWcagGuideline){
@@ -147,26 +148,31 @@ if ($result->num_rows > 0) {
 					} 
 					$form .= '</select>';
 
+				} elseif($fieldName === "Priority"){
 
+					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 
+					foreach ($priorities as &$priority) {
+						if($priority === $currentPriority){
+							$form .= "<option value=\"$priority\" selected>$priority</option>";
+						} else  { 
+							$form .= "<option value=\"$priority\">$priority</option>";
+						}
+					} 
+					$form .= '</select>';
 
-	} elseif($fieldName === "WCAG Version"){
+				} elseif($fieldName === "WCAG Version"){
 
 					$form .= "<select name=\"$fieldName\" id=\"$fieldName\">";
 
 					foreach ($wcagVersions as &$version) {
-						if($version === $currentWcagVersion){
+						if($version === $currentVersion){
 							$form .= "<option value=\"$version\" selected>$version</option>";
 						} else  { 
 							$form .= "<option value=\"$version\">$version</option>";
 						}
 					} 
 					$form .= '</select>';
-
-
-
-
-
 
 
 
