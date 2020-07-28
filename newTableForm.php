@@ -1,7 +1,7 @@
 <?php
 require 'helpers/connect.php';
 require 'helpers/vars.php';
-include  'helpers/top.php'; 
+include  'helpers/top2.php'; 
 
 print "<h1>Create a New Table</h1>";
 
