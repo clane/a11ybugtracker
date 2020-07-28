@@ -9,31 +9,22 @@
 
 label {  display:block; font-weight:bold;  } 
 form div { margin-bottom:2rem; } 
-input[type="text"] { width:90%; } 
+input[type="text"] { width:30%; } 
 
 input[type="submit"] {
-    width: 150px;
-    height: 40px;
-    color: #fff;
-    background-color: #006BA6;
+    margin: 0px 0px 5px 5px;
 }
 
-#sortForm { margin:10px 0; } 
-#sortForm input[type="submit"] {  width:50px; height:30px; margin-left:10px; } 
 
-body { background-color:#FBFCFC; color:#1C2833; } 
-h1, h2, h3, h4, h5, h6 { margin:10px 0; }  
-h1 { margin:10px 0; }  
-td > pre { margin:0; border:none;  max-height:none; white-space: pre-wrap;  } 
 /* END page level styles */
 
 /* BEGIN Table */
 table, th, td { border-collapse: collapse; border:1px solid #ccc; padding:10px; text-align:left; vertical-align:top; }
 th { font-weight:bold; }
 
-th, td { 1%; }
-th:nth-of-type(6),  td:nth-of-type(6) { width:4%; }
+td > pre { margin:0; border:none;  max-height:none; white-space: pre-wrap;  } 
 
+/* END Table */
 
 .logo {
     filter: brightness(3);
