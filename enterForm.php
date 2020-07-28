@@ -16,7 +16,7 @@ require 'helpers/getWcagVersions.php';
 require 'helpers/getPriorities.php'; 
 include  'helpers/top.php'; 
 
-print "<h1>Add an issue to $database $table</h1>";  
+print "<h1>$pageTitle</h1>";  
 
 $form = "<form action=\"insert.php?database=$database&table=$table\" method=\"post\">";
 

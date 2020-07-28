@@ -62,9 +62,7 @@ if ($result->num_rows > 0) {
 
 			} elseif ($colName === "Description" || $colName === "Recommended Remediation" || $colName === "Relevant Code" || $colName === "User Impact"){
         			$html .= "<pre>";  
-
-        			$html .= htmlspecialchars($row[$colName], ENT_QUOTES);
-;  
+        			$html .= $row[$colName];
         			$html .= "</pre>";  
 			} else {
         			$html .= $row[$colName];  
