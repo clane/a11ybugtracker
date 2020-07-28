@@ -60,7 +60,7 @@ if ($result->num_rows > 0) {
 			if($colName === "id" || $colName === "Id"){
 				$html .= $row[$colName];
 
-			} elseif ($colName === "Relevant Code"){
+			} elseif ($colName === "Description" || $colName === "Recommended Remediation" || $colName === "Relevant Code" || $colName === "User Impact"){
         			$html .= "<pre>";  
 
         			$html .= htmlspecialchars($row[$colName], ENT_QUOTES);
