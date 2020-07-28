@@ -5,7 +5,7 @@ require 'helpers/vars.php';
 require 'helpers/getColNames.php';
 include 'helpers/top.php';
 
-print "<h1>A11y Reporting Home</h1>";
+print "<h1>$database - $table Home</h1>";
 
 print "<ul>";
 print "<li><a href=\"./enterForm.php?database=$database&table=$table\">Enter a bug in database:$database table:$table</a></li>"; 

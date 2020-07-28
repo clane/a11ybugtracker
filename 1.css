@@ -24,7 +24,7 @@ input[type="submit"] {
 body { background-color:#FBFCFC; color:#1C2833; } 
 h1, h2, h3, h4, h5, h6 { margin:10px 0; }  
 h1 { margin:10px 0; }  
-pre { margin:0; border:none; max-height:none; white-space: pre-wrap;  } 
+td > pre { margin:0; border:none;  max-height:none; white-space: pre-wrap;  } 
 /* END page level styles */
 
 /* BEGIN Table */
